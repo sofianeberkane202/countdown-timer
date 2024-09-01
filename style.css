@@ -7,7 +7,7 @@
 }
 
 :root {
-  --bg-color: rgba(52, 58, 64, 0.9);
+  --bg-color: rgba(0, 0, 0, 0.6);
   --white-color: #fff;
 }
 
@@ -25,48 +25,75 @@ body {
   background-size: cover;
 }
 
-.timer {
-  display: grid;
-  gap: 24px;
-  justify-items: center;
+.container {
   position: absolute;
-  top: 20%;
+  top: 10%;
   left: 50%;
   transform: translateX(-50%);
+  width: 95%;
 }
 
-.timer h1 {
-  background-color: var(--bg-color);
-  color: white;
-  width: 100%;
-  text-align: center;
-  padding-block: 5px;
-  border-radius: 10px;
-  letter-spacing: 2.5px;
-}
-
-.timer-box {
-  display: flex;
-  justify-content: center;
-  gap: 48px;
-}
-
-.time {
+h1 {
+  width: 70%;
+  margin: auto;
+  font-size: 3rem;
   background-color: var(--bg-color);
   color: var(--white-color);
-  padding-block: 10px;
-  width: 72px;
-  padding-inline: 5px;
-  border-radius: 10px;
+  padding: 5px 20px;
+  border-radius: 15px;
+  letter-spacing: 3px;
+  margin-block-end: 50px;
+  font-weight: 500;
   text-align: center;
 }
 
-.time .number {
-  font-size: 48px;
-  font-weight: 600;
+.countdown-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 800px;
+  gap: 20px;
+  color: var(--white-color);
+  margin: auto;
 }
 
-.time .type {
-  font-size: 14px;
+.countdown-container > div {
+  background-color: var(--bg-color);
+  text-align: center;
+  width: 130px;
   font-weight: 600;
+  padding: 4px 10px;
+}
+
+.big-text {
+  font-size: 5rem;
+}
+
+span {
+  font-size: 1.3rem;
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 1rem;
+  }
+
+  .big-text {
+    font-size: 2rem;
+  }
+
+  .countdown-container {
+    width: 95%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: auto;
+  }
+
+  .countdown-container > div {
+    width: 80px;
+  }
+  span {
+    font-size: 0.8rem;
+  }
 }
